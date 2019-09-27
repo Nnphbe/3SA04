@@ -33,7 +33,7 @@ fetchData = () => {
     render() {
         return ( 
             <View style={styles.container}>
-                <ImageBackground source={require('./blue.jpg')} style={styles.backdrop}> 
+                <ImageBackground source={require('./black.jpg')} style={styles.backdrop}> 
                     <Text style={styles.textmain}>zip code is {this.props.zipCode}</Text>
                     <Forecast {...this.state.forecast} /> 
                 </ImageBackground> 
@@ -43,7 +43,7 @@ fetchData = () => {
 }
 
 const styles = StyleSheet.create({
-    textmain: {paddingTop: 30, fontSize: 50,color: 'white', textAlign: "center"},
+    textmain: {paddingTop: 30, fontSize: 45,color: 'white', textAlign: "center"},
     textdescription: {paddingTop: 50,fontSize: 40,color: 'white', textAlign: "center"},
     texttemp: {paddingTop: 50,fontSize: 30,color: 'white', textAlign: "center"},
     backdrop: { width: '100%', height: '100%',flexDirection:'column',justifyContent:'center',alignItems:'center'},
