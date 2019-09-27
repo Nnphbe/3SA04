@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, FlatList, View, Text, ImageBackground,
     TouchableHighlight } from 'react-native';
-import { black } from 'ansi-colors';
     
     const availableZipItems = [
      { place: 'Hatyai', code: '90110' },
@@ -9,6 +8,7 @@ import { black } from 'ansi-colors';
      { place: 'Chiangmai', code: '50000' },
      { place: 'Khonkaen', code: '40000' },
      { place: 'Chonburi', code: '20000' },
+     { place: 'Satun', code: '91000' },
     ]
     const ZipItem = ({place, code, navigate}) => (
         <TouchableHighlight onPress={() => navigate('Weather', {zipCode: code})}>
@@ -44,7 +44,7 @@ import { black } from 'ansi-colors';
 }
 
 const styles = StyleSheet.create({
-   zipItem:{paddingTop: 30, 
+   zipItem:{paddingTop: 23, 
             fontSize: 45,
             color: 'white', 
             justifyContent:'space-evenly',

@@ -4,8 +4,6 @@ import { createStackNavigator } from 'react-navigation-stack';
 import WeatherScreen from './components/WeatherScreen';
 import ZipCodeScreen from './components/ZipCodeScreen';
 
-// import { StyleSheet, Text, View } from 'react-native';
-
 const RootStack = createStackNavigator({
     Weather: WeatherScreen,
     ZipCode: ZipCodeScreen
