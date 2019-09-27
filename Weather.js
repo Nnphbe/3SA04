@@ -40,12 +40,17 @@ fetchData = () => {
             </View>
         );
     }
+
+    componentDidUpdate = (prevProps) => {
+        if (prevProps.zipCode !== this.props.zipCode) {
+            this.fetchData()
+        }
+    }
+
 }
 
 const styles = StyleSheet.create({
-    textmain: {paddingTop: 30, fontSize: 45,color: 'white', textAlign: "center"},
-    textdescription: {paddingTop: 50,fontSize: 40,color: 'white', textAlign: "center"},
-    texttemp: {paddingTop: 50,fontSize: 30,color: 'white', textAlign: "center"},
-    backdrop: { width: '100%', height: '100%',flexDirection:'column',justifyContent:'center',alignItems:'center'},
+    textmain: {paddingTop: 10, fontSize: 45,color: 'white', textAlign: "center"},
+    backdrop: { width: '100%', height: '100%',flexDirection:'column'},
     
 });

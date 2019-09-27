@@ -10,10 +10,12 @@ import { StyleSheet, FlatList, View, Text,
      { place: 'Chonburi', code: '20000' },
     ]
     const ZipItem = ({place, code, navigate}) => (
-     <View style={styles.zipItem}>
-        <Text style={styles.zipPlace}>{place}</Text>
-        <Text style={styles.zipCode}>{code}</Text>
-     </View>
+        <TouchableHighlight onPress={() => navigate('Weather', {zipCode: code})}>
+            <View style={styles.zipItem}>
+                <Text style={styles.zipPlace}>{place}</Text>
+                <Text style={styles.zipCode}>{code}</Text>
+            </View>
+        </TouchableHighlight>
     )
 
     const _keyExtractor = item => item.code
@@ -37,3 +39,8 @@ import { StyleSheet, FlatList, View, Text,
     );
   }
 }
+
+const styles = StyleSheet.create({
+   zipItem:{paddingTop: 30, fontSize: 45,color: 'white', justifyContent:'space-evenly',flexDirection:'row'},
+
+});
