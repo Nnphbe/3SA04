@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, FlatList, View, Text,
+import { StyleSheet, FlatList, View, Text, ImageBackground,
     TouchableHighlight } from 'react-native';
+import { black } from 'ansi-colors';
     
     const availableZipItems = [
      { place: 'Hatyai', code: '90110' },
@@ -29,6 +30,7 @@ import { StyleSheet, FlatList, View, Text,
  render() {
     const { navigate } = this.props.navigation;
     return (
+        <ImageBackground source={require('./chopper.jpg')} style={styles.backdrop}>
         <View>
             <FlatList
                 data={availableZipItems}
@@ -36,11 +38,27 @@ import { StyleSheet, FlatList, View, Text,
                 renderItem={({item}) => <ZipItem {...item} navigate={navigate}/>}
             />
         </View>
+        </ImageBackground>
     );
   }
 }
 
 const styles = StyleSheet.create({
-   zipItem:{paddingTop: 30, fontSize: 45,color: 'white', justifyContent:'space-evenly',flexDirection:'row'},
+   zipItem:{paddingTop: 30, 
+            fontSize: 45,
+            color: 'white', 
+            justifyContent:'space-evenly',
+            flexDirection:'row'
+        },
+    zipPlace:{
+        color: 'white'
+    },
+
+    zipCode: {
+        color: 'skyblue'
+    },
+        
+    backdrop: { width: '100%', height: '100%',flexDirection:'column'},
+    
 
 });

@@ -16,12 +16,12 @@ export default class Forecast extends React.Component {
     
 }
 const styles = StyleSheet.create({
-    textmain: {paddingTop: 10, fontSize: 40,color: 'white', textAlign: "center"},
+    textmain: {paddingTop: 10, fontSize: 40, textAlign: "center"},
 
     backdrop: { width: '100%', height: '100%',flexDirection:'column',justifyContent:'center',alignItems:'center'},
 
-    container: { paddingTop: 25,
-    backgroundColor: 'black',
+    container: { paddingTop: 5,
+    backgroundColor: 'white',
     opacity: 0.5
     }
 
